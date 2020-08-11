@@ -1,5 +1,7 @@
 # Big 2
 
+This webapp can be accessed online on Netlify [here](https://big2.netlify.app/)
+
 This is a two-player card game based on the popular Asian game Big 2. Currently, the game is restricted to two players and can only be played locally. 
 
 # Libraries/Frameworks
