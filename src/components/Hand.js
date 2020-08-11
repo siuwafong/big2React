@@ -291,20 +291,16 @@ const Hand = ({
             }
 
             await setCards({...cards, [turn]: newRemainingCards})
-
-            // for (let i=0; i < thisTurnCards.length; i++) {
-            //     setTimeout(setAllPlayedCards([...allPlayedCards, thisTurnCards[i]]), 100)
-            // }
             
             setAllPlayedCards([...allPlayedCards,...thisTurnCards])
             
             // Unselect the selected cards
             setSelectedCards(() => [])
 
-            setErrorMsg({errorMsg: null, visibility: "hidden"})
-
             // Check if there is a winner
             checkWinner(newRemainingCards)
+
+            setErrorMsg({errorMsg: null, visibility: "hidden"})
 
             // Change turns
             changeTurn()

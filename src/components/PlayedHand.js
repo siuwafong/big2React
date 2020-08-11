@@ -52,9 +52,9 @@ export const PlayedHand = ({ mostRecentPlay, allPlayedCards }) => {
     }
     
     return (
-        <div>
+        <div className="PlayedHand">
             {mostRecentPlay.typeOfHand !== null && `Last Played Hand: ${handMsg}`}
-            <div className="PlayedHand">
+            <div >
                 {allPlayedCards.map(c => (
                     <PlayedCard image={c.image} name={c.code} key={c.code}/>
                 ))}

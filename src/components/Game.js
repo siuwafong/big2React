@@ -134,11 +134,11 @@ const Game = ({ setBackgroundColour}) => {
                         setErrorMsg={setErrorMsg}  
                     />
                     <h1> Player {turn}'s Turn </h1>
-                    <ErrorMsg errorMsg={errorMsg} setErrorMsg={setErrorMsg}  />
+                                        
                     {gameOver 
                     &&
                     <div>
-                        <h2> Game Over!  Player {turn} wins.</h2>
+                        <h2> Game Over!  Player {turn === 1 ? "2" : "1"} wins.</h2>
                         <button className="gameOverBtn" onClick={() => {
                                 restartGame()
                             }
@@ -156,6 +156,8 @@ const Game = ({ setBackgroundColour}) => {
                         allPlayedCards={allPlayedCards}
                         mostRecentPlay={mostRecentPlay} 
                     />
+
+                    <ErrorMsg errorMsg={errorMsg} setErrorMsg={setErrorMsg}  />
 
                     <Hand 
                         startingHand={cards[2]} 
