@@ -5,6 +5,7 @@ This is a two-player card game based on the popular Asian game Big 2. Currently,
 # Libraries/Frameworks
 
 This webapp was designed with React. No other libraries were used.
+This webapp relies on the Deck of Cards API.  Documentation for the API can be found [here](https://deckofcardsapi.com/)
 
 # Instructions
 
