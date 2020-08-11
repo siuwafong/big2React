@@ -1,0 +1,7 @@
+.errorMsg {
+    background-color:#d5a6a6;
+    color: red;
+    padding: 4px 0;
+    margin: auto;
+    width: 500px;
+}

@@ -1,0 +1,41 @@
+.Hand-cards { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Player2Hand {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 50px;
+}
+
+.playHandBtn {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    font-size: 20px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 10px;
+}
+
+.passBtn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    font-size: 20px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 10px;
+}
+
+.handTitle {
+    margin-bottom: 2px;
+    padding-bottom: 0;
+}
