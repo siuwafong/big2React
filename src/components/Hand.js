@@ -135,11 +135,18 @@ const Hand = ({
                     break;
                 case 5:
                     const sortedDenominations = denominations.sort((a, b) => a - b)
+                    console.log(sortedDenominations)
                     
                     // check if hand is a straight flush
-                    if (suits[0] === suits[1] &&  suits[1] === suits[2] && suits[2] === suits[3] && suits[3] === suits[4] 
+                    if (suits[0] === suits[1] &&  
+                        suits[1] === suits[2] && 
+                        suits[2] === suits[3] && 
+                        suits[3] === suits[4] 
                         && 
-                        sortedDenominations[0] === sortedDenominations[1] - 1 && sortedDenominations[1] === sortedDenominations[2] - 1 && sortedDenominations[2] === sortedDenominations[3] - 1 && sortedDenominations[3] === sortedDenominations[4] - 1) {
+                        sortedDenominations[0] === sortedDenominations[1] - 1 
+                        && sortedDenominations[1] === sortedDenominations[2] - 1 
+                        && sortedDenominations[2] === sortedDenominations[3] - 1 
+                        && sortedDenominations[3] === sortedDenominations[4] - 1) {
                         const straightFlushDenomination = sortedDenominations[4]
                         const straightFlushSuit = suits[0]
                         // if the most recent play was a straight flush...
@@ -163,7 +170,13 @@ const Hand = ({
                     }
 
                     // check if hand is a 'four of a kind'
-                    else if (sortedDenominations[0] === sortedDenominations[1] === sortedDenominations[2] === sortedDenominations[3] || sortedDenominations[1] === sortedDenominations[2] === sortedDenominations[3] === sortedDenominations[4]) {
+                    else if (sortedDenominations[0] === sortedDenominations[1] 
+                            && sortedDenominations[1] === sortedDenominations[2] 
+                            && sortedDenominations[2] === sortedDenominations[3] 
+                            || 
+                            sortedDenominations[1] === sortedDenominations[2] 
+                            && sortedDenominations[2] === sortedDenominations[3] 
+                            && sortedDenominations[3] === sortedDenominations[4]) {
                         const fourOfAKindDenomination = sortedDenominations[1]
                         // if the most recent play was a straight flush...
                         if (mostRecentPlay.typeOfHand === "straightFlush") {
@@ -182,9 +195,13 @@ const Hand = ({
                     }
 
                     // check if hand is a 'full house'
-                    else if (sortedDenominations[0] === sortedDenominations[1] && sortedDenominations[2] === sortedDenominations[3] && sortedDenominations[3] === sortedDenominations[4] 
+                    else if (sortedDenominations[0] === sortedDenominations[1] 
+                            && sortedDenominations[2] === sortedDenominations[3] 
+                            && sortedDenominations[3] === sortedDenominations[4] 
                              ||
-                             sortedDenominations[0] === sortedDenominations[1] && sortedDenominations[1] === sortedDenominations[2] && sortedDenominations[3] === sortedDenominations[4]) {
+                             sortedDenominations[0] === sortedDenominations[1] 
+                             && sortedDenominations[1] === sortedDenominations[2] 
+                             && sortedDenominations[3] === sortedDenominations[4]) {
                         const fullHouseDenomination = sortedDenominations[2]
                         if (mostRecentPlay.typeOfHand === "straightFlush" || mostRecentPlay.typeOfHand === "fourOfAKind") {
                             setErrorMsg({errorMsg: "A full house cannot beat a straight flush or a four-of-a-kind!", visibility: "visible"})
