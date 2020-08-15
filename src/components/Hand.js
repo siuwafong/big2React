@@ -172,7 +172,7 @@ const Hand = ({
                     // check if hand is a 'four of a kind'
                     else if (sortedDenominations[0] === sortedDenominations[1] 
                             && sortedDenominations[1] === sortedDenominations[2] 
-                            && sortedDenominations[2] === sortedDenominations[3] 
+                            && sortedDenominations[2] === sortedDenominations[3]
                             || 
                             sortedDenominations[1] === sortedDenominations[2] 
                             && sortedDenominations[2] === sortedDenominations[3] 
@@ -192,6 +192,9 @@ const Hand = ({
                                 finishPlay(playedCards)
                             }
                         }
+                        setMostRecentPlay({typeOfHand: "fourOfAKind", max: {denomination: fourOfAKindDenomination, suit: maxSuit}})
+                        setRequiredHandAmount(5)
+                        finishPlay(playedCards)
                     }
 
                     // check if hand is a 'full house'
