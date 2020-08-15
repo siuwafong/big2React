@@ -192,9 +192,11 @@ const Hand = ({
                                 finishPlay(playedCards)
                             }
                         }
-                        setMostRecentPlay({typeOfHand: "fourOfAKind", max: {denomination: fourOfAKindDenomination, suit: maxSuit}})
-                        setRequiredHandAmount(5)
-                        finishPlay(playedCards)
+                        else {
+                            setMostRecentPlay({typeOfHand: "fourOfAKind", max: {denomination: fourOfAKindDenomination, suit: maxSuit}})
+                            setRequiredHandAmount(5)
+                            finishPlay(playedCards)
+                        }
                     }
 
                     // check if hand is a 'full house'
